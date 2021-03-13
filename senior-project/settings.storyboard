@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="Pf6-J6-Gq8">
+            <objects>
+                <viewController id="TDW-0p-7AV" customClass="SettingsViewController" customModule="senior_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u6C-fA-qvC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qrb-oI-LUN">
+                                <rect key="frame" x="107" y="60" width="201" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uo-Yp-2u0">
+                                <rect key="frame" x="107" y="527" width="201" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Delete Account">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteAccountTapped:" destination="TDW-0p-7AV" eventType="touchUpInside" id="b6M-n8-jZG"/>
+                                    <segue destination="5PW-ZG-r9q" kind="show" id="R3i-12-Gt0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfV-TH-QbL">
+                                <rect key="frame" x="107" y="202" width="201" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reset Password">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPasswordTapped:" destination="TDW-0p-7AV" eventType="touchUpInside" id="kMZ-Zk-21j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLG-Bw-6Qr">
+                                <rect key="frame" x="104" y="350" width="207" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Change Username">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetEmailTapped:" destination="TDW-0p-7AV" eventType="touchUpInside" id="x9O-KA-EVQ"/>
+                                    <segue destination="i5k-z9-NjO" kind="show" id="rCW-nk-Ht1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="tBG-Tc-XiH"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ip1-dm-uPn"/>
+                    <connections>
+                        <outlet property="blurView" destination="j6C-Yu-gXr" id="AjY-qX-rsT"/>
+                        <outlet property="deleteAccountButton" destination="2uo-Yp-2u0" id="gNK-bv-Uwl"/>
+                        <outlet property="popUpView" destination="0bC-sk-efT" id="ExH-KZ-T46"/>
+                        <outlet property="resetEmailButton" destination="qLG-Bw-6Qr" id="0kb-pM-p3j"/>
+                        <outlet property="resetPasswordButton" destination="SfV-TH-QbL" id="Xfh-tO-yCR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yv1-yC-3MZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="0bC-sk-efT">
+                    <rect key="frame" x="0.0" y="0.0" width="330" height="205"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="haM-bf-AVm">
+                            <rect key="frame" x="0.0" y="0.0" width="330" height="169"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <string key="text">A reset password link has been sent to the email registered with this acoount. Please follow the instructions in the email to reset your password.</string>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xDh-F0-Fve">
+                            <rect key="frame" x="0.0" y="169" width="330" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="OK"/>
+                            <connections>
+                                <action selector="okTapped:" destination="TDW-0p-7AV" eventType="touchUpInside" id="WkE-v9-Fhe"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="i32-Ht-BZS" firstAttribute="bottom" secondItem="xDh-F0-Fve" secondAttribute="bottom" id="4Dm-qq-bgT"/>
+                        <constraint firstItem="haM-bf-AVm" firstAttribute="leading" secondItem="i32-Ht-BZS" secondAttribute="leading" id="BJA-rR-z6d"/>
+                        <constraint firstItem="haM-bf-AVm" firstAttribute="trailing" secondItem="i32-Ht-BZS" secondAttribute="trailing" id="OLb-98-PeY"/>
+                        <constraint firstItem="haM-bf-AVm" firstAttribute="top" secondItem="0bC-sk-efT" secondAttribute="top" id="ZZh-yL-7u6"/>
+                        <constraint firstItem="xDh-F0-Fve" firstAttribute="leading" secondItem="0bC-sk-efT" secondAttribute="leading" id="glr-dB-Rdd"/>
+                        <constraint firstAttribute="trailing" secondItem="xDh-F0-Fve" secondAttribute="trailing" id="lmH-b0-BNV"/>
+                        <constraint firstItem="xDh-F0-Fve" firstAttribute="top" secondItem="haM-bf-AVm" secondAttribute="bottom" id="vXd-rx-pGj"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="i32-Ht-BZS"/>
+                </view>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="YT3-bj-G54">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j6C-Yu-gXr">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+            </objects>
+            <point key="canvasLocation" x="1440.8" y="-1175.2623688155923"/>
+        </scene>
+        <!--Change Username-->
+        <scene sceneID="CB5-hS-vkM">
+            <objects>
+                <viewController id="i5k-z9-NjO" customClass="ChangeUsername" customModule="senior_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TI8-ad-IFh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Current Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNB-Tm-jAz">
+                                <rect key="frame" x="41" y="242" width="328" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M3l-ls-7j5">
+                                <rect key="frame" x="44" y="410" width="328" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNR-CJ-JTP">
+                                <rect key="frame" x="45" y="50" width="331" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="roS-zX-9lA">
+                                <rect key="frame" x="63" y="113" width="296" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Please fill in your current email, current password, and new username to reset your email.  You may need to logout to see changes</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3sD-B6-NQE">
+                                <rect key="frame" x="41" y="326" width="328" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="error" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBs-cV-Ymq">
+                                <rect key="frame" x="85" y="538" width="240" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="e1I-yU-c47">
+                                <rect key="frame" x="179" y="538" width="51" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1k-Mx-UVm">
+                                <rect key="frame" x="162" y="473" width="86" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitTapped:" destination="i5k-z9-NjO" eventType="touchUpInside" id="Low-5p-QYf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="dKv-y0-fEL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A8W-O7-oOU"/>
+                    <connections>
+                        <outlet property="activityInd" destination="e1I-yU-c47" id="pNg-lg-4Hb"/>
+                        <outlet property="currEmailTextField" destination="aNB-Tm-jAz" id="9J8-oK-H9b"/>
+                        <outlet property="errorLabel" destination="IBs-cV-Ymq" id="wK1-6P-sdO"/>
+                        <outlet property="instructionsTextView" destination="roS-zX-9lA" id="bn7-jL-uFG"/>
+                        <outlet property="newUsernameTextField" destination="M3l-ls-7j5" id="t5R-ff-Cpk"/>
+                        <outlet property="passwordTextField" destination="3sD-B6-NQE" id="36c-Uw-yPc"/>
+                        <outlet property="submitButton" destination="g1k-Mx-UVm" id="ySr-bK-aV4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gm6-eh-iId" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3194.202898550725" y="-683.70535714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Pbu-Qv-eXa">
+            <objects>
+                <navigationController storyboardIdentifier="settingsVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="RvN-0l-JYB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rNC-ig-ZGb">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lfO-E7-m7K">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="TDW-0p-7AV" kind="relationship" relationship="rootViewController" id="Pcp-6L-qhz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3o8-0D-Reu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610" y="-2424"/>
+        </scene>
+        <!--Delete Account View Controller-->
+        <scene sceneID="bIH-kh-Gj9">
+            <objects>
+                <viewController id="5PW-ZG-r9q" customClass="DeleteAccountViewController" customModule="senior_project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aVY-GS-NVJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Please fill in your current email and password to delete your account." textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YUu-wa-4gH">
+                                <rect key="frame" x="65" y="108" width="285" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcd-kg-7yF">
+                                <rect key="frame" x="65" y="291" width="297" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frg-ol-1Sm">
+                                <rect key="frame" x="164" y="348" width="86" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitTapped:" destination="5PW-ZG-r9q" eventType="touchUpInside" id="td6-WW-Hyd"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="error" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juO-OK-UOt">
+                                <rect key="frame" x="87" y="416" width="240" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delete Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JUV-ds-PK8">
+                                <rect key="frame" x="76" y="49" width="262" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gh7-mj-vma">
+                                <rect key="frame" x="65" y="207" width="297" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="JzB-yj-p4n">
+                                <rect key="frame" x="179" y="436" width="55" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trash.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="mtA-08-X4P">
+                                <rect key="frame" x="144" y="540" width="128" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oi7-AN-gp4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aeH-Db-Zec"/>
+                    <connections>
+                        <outlet property="activityInd" destination="JzB-yj-p4n" id="1tY-ID-U1t"/>
+                        <outlet property="blurView" destination="KeQ-NH-ZQm" id="bPf-7h-9ZM"/>
+                        <outlet property="emailTextField" destination="gh7-mj-vma" id="XSd-qx-Xcb"/>
+                        <outlet property="errorLabel" destination="juO-OK-UOt" id="QfL-Pr-nqb"/>
+                        <outlet property="noButton" destination="y6g-RA-IWS" id="UAA-Ki-Ype"/>
+                        <outlet property="passwordTextField" destination="mcd-kg-7yF" id="bI1-az-fse"/>
+                        <outlet property="popUpView" destination="Rfo-yi-tjG" id="ixi-Qn-hzy"/>
+                        <outlet property="submitButton" destination="Frg-ol-1Sm" id="C7b-6e-Bk9"/>
+                        <outlet property="yesButton" destination="NAH-Bk-6ty" id="93c-2d-sMF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xn9-2u-3Is" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="Rfo-yi-tjG">
+                    <rect key="frame" x="0.0" y="0.0" width="251" height="137"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Are you sure you want to delete your account? This action cannot be undone. " textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YF9-JH-f76">
+                            <rect key="frame" x="0.0" y="0.0" width="251" height="101"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAH-Bk-6ty">
+                            <rect key="frame" x="0.0" y="101" width="125.66666666666667" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="Yes">
+                                <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="okTapped:" destination="TDW-0p-7AV" eventType="touchUpInside" id="lH1-9j-V0D"/>
+                                <action selector="yesButton:" destination="5PW-ZG-r9q" eventType="touchUpInside" id="C0k-LB-CFJ"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y6g-RA-IWS">
+                            <rect key="frame" x="125.66666666666669" y="101" width="125.33333333333331" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <state key="normal" title="No"/>
+                            <connections>
+                                <action selector="noButton:" destination="5PW-ZG-r9q" eventType="touchUpInside" id="T9B-y0-ZjU"/>
+                                <action selector="okTapped:" destination="TDW-0p-7AV" eventType="touchUpInside" id="xaz-x7-oMC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="NAH-Bk-6ty" firstAttribute="bottom" secondItem="yBS-9L-PP7" secondAttribute="bottom" id="52W-dQ-QDp"/>
+                        <constraint firstItem="NAH-Bk-6ty" firstAttribute="width" secondItem="y6g-RA-IWS" secondAttribute="width" id="7Fp-Rq-v3t"/>
+                        <constraint firstItem="NAH-Bk-6ty" firstAttribute="top" secondItem="YF9-JH-f76" secondAttribute="bottom" id="8KN-vJ-KBD"/>
+                        <constraint firstItem="y6g-RA-IWS" firstAttribute="leading" secondItem="NAH-Bk-6ty" secondAttribute="trailing" id="Dm0-JJ-kCX"/>
+                        <constraint firstItem="YF9-JH-f76" firstAttribute="top" secondItem="yBS-9L-PP7" secondAttribute="top" id="Hg0-En-Mah"/>
+                        <constraint firstItem="NAH-Bk-6ty" firstAttribute="leading" secondItem="yBS-9L-PP7" secondAttribute="leading" id="Lfi-ex-SvL"/>
+                        <constraint firstItem="YF9-JH-f76" firstAttribute="leading" secondItem="yBS-9L-PP7" secondAttribute="leading" id="MNx-gR-ezI"/>
+                        <constraint firstItem="y6g-RA-IWS" firstAttribute="leading" secondItem="NAH-Bk-6ty" secondAttribute="trailing" id="bEC-7V-HFg"/>
+                        <constraint firstItem="y6g-RA-IWS" firstAttribute="top" secondItem="YF9-JH-f76" secondAttribute="bottom" id="jAj-wI-q3s"/>
+                        <constraint firstItem="y6g-RA-IWS" firstAttribute="bottom" secondItem="yBS-9L-PP7" secondAttribute="bottom" id="kkE-zk-VaQ"/>
+                        <constraint firstItem="NAH-Bk-6ty" firstAttribute="top" secondItem="YF9-JH-f76" secondAttribute="bottom" id="nI5-3F-uY5"/>
+                        <constraint firstItem="yBS-9L-PP7" firstAttribute="trailing" secondItem="y6g-RA-IWS" secondAttribute="trailing" id="qfG-hC-KSM"/>
+                        <constraint firstItem="YF9-JH-f76" firstAttribute="trailing" secondItem="yBS-9L-PP7" secondAttribute="trailing" id="rVX-ay-eFK"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="yBS-9L-PP7"/>
+                </view>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" id="KeQ-NH-ZQm">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tTm-y2-74c">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="regular"/>
+                </visualEffectView>
+            </objects>
+            <point key="canvasLocation" x="2457.971014492754" y="-1454.4642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="trash.fill" catalog="system" width="121" height="128"/>
+    </resources>
+</document>
